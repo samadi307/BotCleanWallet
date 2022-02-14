@@ -16,7 +16,6 @@ abi = json.loads('####')
 #################################################
 def checkbnb():
     web3 = Web3(Web3.HTTPProvider(bsc))
-    print(web3.eth.generate_gas_price())
 	# print(web3.isConnected())
     balance = web3.eth.get_balance(sender_address)
 	# print(balance)
@@ -49,4 +48,4 @@ while(True):
         print(f"Transaction has been sent to {tothisadresse}")
         time.sleep(5)
     else:
-        print("Crypto not available")
+        print(str(contract.functions.symbol().call()) + " not Found")
